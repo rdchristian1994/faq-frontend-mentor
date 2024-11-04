@@ -1,0 +1,146 @@
+@font-face {
+  font-family: "WorkSans";
+  src: url("/assets/fonts/WorkSans-VariableFont_wght.ttf");
+  font-weight: 100 900; /* Interval de greutăți variabile de la 100 la 900 */
+  font-weight: 100 900; /* Același interval pentru stilul italic */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: url("/assets/fonts/WorkSans-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-style: italic;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "WorkSans", sans-serif;
+}
+
+html {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  background-image: url("/assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(275, 100%, 97%);
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.main-container {
+  text-align: justify;
+  width: 600px;
+  border-radius: 15px;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 50px;
+  position: relative;
+  top: 50px;
+  margin-bottom: 150px;
+}
+
+@media (max-width: 700px) {
+  .main-container {
+    text-align: left;
+    width: 90%;
+    position: relative;
+    top: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    background-image: url("/assets/images/background-pattern-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw;
+  }
+}
+@media (max-width: 370px) {
+  .main-container {
+    width: 90%;
+    position: relative;
+    top: 50px;
+  }
+}
+
+.title-faq img {
+  height: 2rem;
+  margin-right: 5%;
+}
+
+.title-faq-span {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(292, 42%, 14%);
+}
+
+.title-faq {
+  padding: 10px;
+  margin-top: -25px;
+  margin-bottom: 10px;
+}
+
+.question1,
+.question2,
+.question3 {
+  color: hsl(292, 42%, 14%);
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+  border-bottom: 2px solid hsl(275, 100%, 97%);
+}
+.question4 {
+  color: hsl(292, 42%, 14%);
+}
+
+/* h4:hover {
+  color: hsl(296, 69%, 48%);
+  cursor: pointer;
+} */
+
+.question-button-extent {
+  position: absolute;
+  right: 20px;
+  margin-top: -15px;
+  padding: 10px;
+}
+
+.panel{
+  position: relative;
+  top: 15px;
+  font-size: 16px;
+  color: hsl(292, 16%, 49%);
+  font-weight: 400;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion {
+  background-color: transparent;
+  color: hsl(292, 42%, 14%);
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: 0.4s;
+  outline: none;
+  border: none;
+  font-size: 18px;
+  font-weight: 650;
+}
+
+.active,
+.accordion:hover {
+  color: hsl(296, 69%, 48%);
+}
